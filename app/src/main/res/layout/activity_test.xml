@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="handler"
+            type="com.google.androidarc.utils.TestHandler" />
+
+        <variable
+            name="user"
+            type="com.google.androidarc.database.User" />
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:onClick="@{handler::onClickView}"
+            android:padding="10dp"
+            android:text="@{user.firstName}" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center"
+            android:onClick="@{handler::onClickStudent}"
+            android:padding="10dp"
+            android:text="@{user.lastName}" />
+    </FrameLayout>
+</layout>
